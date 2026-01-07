@@ -1,0 +1,6 @@
+FastAPI
+pymongo[srv]
+Pydantic
+dotenv
+uvicorn
+pydantic[email]
