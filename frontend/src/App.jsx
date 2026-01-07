@@ -1,27 +1,32 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
 import Navbar from "../Components/navbar"
-import Task from '../Components/Task';
-import Dashborad from '../Components/Dashborad';
-import Teams from '../Components/Teams';
-import Inventory from '../Components/Inventory';
-import Reports from '../Components/Reports';
+import Leftbar from '../Components/leftbar';
+import Project from '../Components/project'
 
 function App() {
   return (
-    <div className=' min-h-screen bg-[#FAF3E3] flex flex-col overflow-hidden'>
-      <div className='shrink-0'>
+    <div className=' min-h-screen bg-[#F6E2DC] flex flex-col overflow-hidden'>
+      {/* Header */}
+      <div className=' h-15 bg-[#FCF2F0] rounded-b-3xl'>
         <Navbar />
       </div>
 
-      <div className=' flex-1 pt-10 px-10 pb-10 flex flex-col min-h-0'>
-          <Routes>  
-            <Route path='/' element={<Dashborad />} />
-            <Route path='/Task' element={<Task />} />
-            <Route path='/Teams' element={<Teams />} />
-            <Route path='/Inventory' element={<Inventory />} />
-            <Route path='/Reports' element={<Reports />} />
+      {/* Body */}
+      <div className=' min-w-screen flex-1 h-full flex'>
+
+        <div className=' w-1/4'>
+          {/* Left */}
+          <Leftbar />
+        </div>
+
+        <div className=' w-full'>
+          {/* Right */}
+          <Routes>
+            <Route path='/project' element={<Project />} />
           </Routes>
+        </div>
+
       </div>
     </div>
   )
