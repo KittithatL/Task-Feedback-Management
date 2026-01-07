@@ -2,9 +2,11 @@ from pydantic import BaseModel
 from datetime import datetime
 from typing import Optional
 
+
 class TaskCreate(BaseModel):
-    title: str
-    description: Optional[str]
+    project_id: str
+    task_title: str
+    description: Optional[str] = None
     deadline: datetime
     created_by: str
     assigned_to: str
