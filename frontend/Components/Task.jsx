@@ -14,7 +14,7 @@ const Task = () => {
     "DONE": { name: "Done", items: [] }
   });
 
-  useEffect(() => {ห
+  useEffect(() => {
     fetchTasks();
   }, [projectId]);
 
